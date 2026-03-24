@@ -10,5 +10,3 @@ img = qr.make_image()
 img.save(file_path)
 
 print("QR generated")
-
-print("hello world")
