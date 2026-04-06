@@ -1,0 +1,17 @@
+# Normalize line endings in the repo
+* text=auto eol=lf
+
+# Keep images/binaries untouched
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.svg -text
+*.ico -text
+*.pdf -text
+*.zip -text
+*.exe -text
+*.jar -text
+
+# Lock common binary formats
+*.lock -text

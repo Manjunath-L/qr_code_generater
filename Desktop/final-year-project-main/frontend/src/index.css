@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mind Map Styles */
+.react-flow__node-mindMapNode {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.react-flow__node-mindMapNode.selected {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8), 0 0 0 4px #6E56CF;
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background-color: #8A75F0;
+  border: 2px solid white;
+  opacity: 0; /* Hide handles by default */
+}
+
+.react-flow__handle:hover {
+  background-color: #6E56CF;
+  opacity: 0.5; /* Show slightly on hover */
+}
+
+.react-flow__edge-path {
+  stroke: #8A75F0;
+  stroke-width: 2;
+  stroke-opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.react-flow__connection-path {
+  stroke: #8A75F0;
+  stroke-width: 2;
+  stroke-opacity: 0.8;
+}
+
+/* When a node is selected, show its handles */
+.react-flow__node.selected .react-flow__handle {
+  opacity: 0.5;
+}
+
+/* Make nodes float on selection or hover */
+.react-flow__node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__node.selected {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.mindmap-node {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.mindmap-node:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Flowchart Styles - previously defined */
+.react-flow__node-mindmap {
+  background: white;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  padding: 2px 5px;
+  font-weight: 700;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 142.1 76.2% 36.3%;
+    --secondary-foreground: 355.7 100% 97.3%;
+
+    --accent: 262.1 83.3% 57.8%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 222.2 47.4% 11.2%;
+    --chart-2: 142.1 76.2% 36.3%;
+    --chart-3: 262.1 83.3% 57.8%;
+    --chart-4: 0 84.2% 60.2%;
+    --chart-5: 38 92.1% 50.2%;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 222.2 47.4% 11.2%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 262.1 83.3% 57.8%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 215 20.2% 65.1%;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+/* Mind Map Node Styles */
+.mindmap-node {
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.mindmap-node--root {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+}
+
+.mindmap-node--child {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.mindmap-node--grandchild {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  font-size: 0.875rem;
+}
+
+.mindmap-connector {
+  stroke-width: 2;
+  fill: none;
+}
+
+.mindmap-connector--root {
+  stroke: hsl(var(--secondary));
+}
+
+.mindmap-connector--child {
+  stroke: hsl(var(--accent));
+}

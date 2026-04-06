@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% load custom_filter %}
+    <h1>Front_end-page</h1>
+    {{name|upper}}
+    <br>
+    {{place|slice:"0:3:1"}}
+    <br>
+    <br>
+    <!-- <form action="/" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form> -->
+    <!-- {{place|truncatechars:5}} -->
+    <br>
+    {{plce|default:"Not Found"}}
+    <br>
+    {{place|length}}
+    <br>
+    {{va.2}}
+    <br>
+    {{emp}}
+    <br>
+    {{emp.name}}
+    <br>
+    {{emp.name|capfirst}}
+    <br>
+    {{emp.age}}
+    <br>
+    {{emp.sal}}
+    <br>
+    {{emp.name|sample}}
+
+    <h3>Original Name: {{ emp.name }}</h3>
+
+    Alternate Case: {{ emp.name|sample }} <br>
+    Reverse: {{ emp.name|reverse_string }} <br>
+    Vowel Count: {{ emp.name|vowels }} <br>
+    Remove Duplicates: {{ emp.name|remove_duplicates }} <br>
+
+    Word Count: {{ sentence|count_words }} <br>
+    Palindrome Check: {{ word|is_palindrome }} <br>
+
+
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vitae ut veniam nemo eveniet tenetur rem exercitationem, quis, fugit placeat non possimus sapiente soluta, inventore nam consectetur natus tempora aliquid!</p> -->
+</body>
+
+</html>

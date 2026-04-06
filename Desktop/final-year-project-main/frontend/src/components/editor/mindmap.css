@@ -1,0 +1,139 @@
+.mindmap-container {
+  background-color: #fff;
+}
+
+/* Node styling */
+.node-container {
+  display: flex;
+  background-color: #F6AD55;
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-right: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.node-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.node-label {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-input {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  padding: 0;
+}
+
+/* Handle styling */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background-color: #F6AD55;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.react-flow__handle-top {
+  top: -6px;
+}
+
+.react-flow__handle-bottom {
+  bottom: -6px;
+}
+
+.react-flow__handle-left {
+  left: -6px;
+}
+
+.react-flow__handle-right {
+  right: -6px;
+}
+
+/* Edge styling */
+.react-flow__edge path {
+  stroke: #F6AD55;
+  stroke-width: 2;
+}
+
+.react-flow__edge-path {
+  stroke: #F6AD55;
+  stroke-width: 2;
+}
+
+/* Default marker */
+.react-flow__edge-marker {
+  color: #F6AD55;
+  fill: #F6AD55;
+}
+
+/* Arrow marker */
+.react-flow__arrowclosed {
+  fill: #F6AD55;
+}
+
+.react-flow__edge-text {
+  font-size: 12px;
+}
+
+.react-flow__edge-textbg {
+  fill: white;
+}
+
+/* Controls styling */
+.react-flow__controls {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__controls-button {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #eee;
+  box-sizing: content-box;
+  padding: 6px;
+}
+
+.react-flow__controls-button svg {
+  fill: #555;
+}
+
+/* Attribution panel */
+.attribution {
+  color: #888;
+  padding: 5px 10px;
+  font-size: 12px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
